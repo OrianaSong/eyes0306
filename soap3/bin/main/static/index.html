@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test03 Database</title>
+  </head>
+  <body>
+    <h1>Test03 Database</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nameaa</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- 여기서부터는 Thymeleaf 코드 -->
+        <tr th:each="u : userList}">
+          <td th:text="${u.id}"></td>
+          <td th:text="${u.name}"></td>
+          <td th:text="${u.age}"></td>
+        </tr>
+        <!-- 여기까지 -->
+      </tbody>
+    </table>
+  </body>
+</html>
